@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gemini AI Chatbot</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Gemini AI Chatbot</h1>
-    <div id="chat-box" class="chat-box"></div>
-    <form id="chat-form">
-      <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" required />
-      <button type="submit">Send</button>
-    </form>
-  </div>
-  <script src="script.js"></script>
+    <div class="app-container">
+        <aside class="sidebar">
+            <h1 class="sidebar-title">Gemini AI</h1>
+            <div class="api-buttons">
+                <button class="api-btn api-btn--active" data-api="text">Text</button>
+                <button class="api-btn" data-api="image">Image</button>
+                <button class="api-btn" data-api="video">Video</button>
+                <button class="api-btn" data-api="audio">Audio</button>
+                <button class="api-btn" data-api="document">Document</button>
+                <button class="api-btn" data-api="chat">Chat</button>
+            </div>
+            <div class="sidebar-footer">
+                <select id="model-select" class="model-select"></select>
+                <button id="clear-chat" class="clear-chat-btn">Clear Chat</button>
+            </div>
+        </aside>
+        <main class="chat-area">
+            <div id="chat-box" class="chat-box"></div>
+            <form id="chat-form" class="chat-form">
+                <input type="text" id="user-input" class="chat-form__input" placeholder="Type your message...">
+                <input type="file" id="file-input" style="display: none;">
+                <button type="button" id="attachment-btn" class="chat-form__btn">Attach</button>
+                <button type="submit" class="chat-form__btn">Send</button>
+            </form>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
